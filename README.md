@@ -16,3 +16,9 @@ This repo contains sources for JEE training given at Edacy Makersday
     </dependencies>
 </module>
 ```
+
+```
+<driver name="mysql" module="com.mysql">
+                        <driver-class>com.mysql.jdbc.Driver</driver-class>
+                    </driver>
+```
