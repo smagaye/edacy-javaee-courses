@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>sn.edacy</groupId>
+    <artifactId>cohort-managment</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>sn.edacy</groupId>
+  <artifactId>cohort-ws</artifactId>
+  
+  <dependencies>
+  
+  	<dependency>
+  		<groupId>sn.edacy</groupId>
+  		<artifactId>cohort-model</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>sn.edacy</groupId>
+  		<artifactId>cohort-business</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  	
+    <dependency>
+        <groupId>javax.enterprise</groupId>
+        <artifactId>cdi-api</artifactId>
+        <scope>provided</scope>
+    </dependency>
+  
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jaxb-provider</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jaxrs</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+</project>

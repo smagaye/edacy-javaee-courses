@@ -24,6 +24,12 @@
   		<version>${project.version}</version>
   	</dependency>
   	
+	<dependency>
+  		<groupId>sn.edacy</groupId>
+  		<artifactId>cohort-ws</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  	
     <!-- Import the JSF API, we use provided scope as the API is included in JBoss EAP -->
     <dependency>
         <groupId>org.jboss.spec.javax.faces</groupId>

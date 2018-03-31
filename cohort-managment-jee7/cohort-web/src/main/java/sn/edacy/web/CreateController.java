@@ -1,8 +1,6 @@
 package sn.edacy.web;
 
 import javax.enterprise.context.RequestScoped;
-import javax.enterprise.inject.Produces;
-import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -23,8 +21,6 @@ public class CreateController {
      */
     public String create() {
         talentService.saveCohort(newCohort);
-        String message = "A new user with id " + newCohort.getId() + " has been created successfully";
-        //facesContext.addMessage(null, new FacesMessage(message));
     		return "/index";
     }
 
