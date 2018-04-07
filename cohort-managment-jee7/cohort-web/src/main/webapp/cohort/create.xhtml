@@ -5,18 +5,25 @@
     xmlns:f="http://java.sun.com/jsf/core">
 
 <ui:composition template="../template.xhtml">
+    
+    <ui:define name="footer">
+   		<span> Je suis dans le footer de la creation</span>
+    </ui:define>
+
     <ui:define name="content">
-        <h:messages />
-        <h:form>
-            <h:panelGrid columns="3">
-                <h:outputLabel for="username">Enter username:</h:outputLabel>
-                <h:inputText id="username" value="#{createController.newCohort.name}" />
-                <h:message for="username" />
-            </h:panelGrid>
-            
-            <h:commandButton action="#{createController.create}"
-                value="Créer" />
-        </h:form>
+    		
+    		<h:form>
+    			<h:panelGrid columns="3">
+    				<h:outputLabel>Entrer le nom de la cohort</h:outputLabel>
+    				<h:inputText id="cohortName" value="#{createCohortBean.cohort.name}" />
+    				<h:commandButton 
+    					value="Créer"
+    					action="#{createCohortBean.create}" />
+    				<h:button value="Retour"
+    					outcome="/index" />
+    			</h:panelGrid>
+    		</h:form>
+    
     </ui:define>
 </ui:composition>
 </html>

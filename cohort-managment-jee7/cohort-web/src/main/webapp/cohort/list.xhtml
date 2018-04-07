@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="../template.xhtml">
+    <ui:define name="content">
+    
+    		<h:form>
+    			<h:panelGrid columns="2">
+    				<h:outputLabel value="Identifiant"></h:outputLabel>
+    				<h:inputText value="#{listeCohortBean.cohortSearch.identifier}"></h:inputText>
+    				
+    				<h:outputLabel value="Name"></h:outputLabel>
+    				<h:inputText value="#{listeCohortBean.cohortSearch.name}"></h:inputText>
+    				
+    				<h:outputLabel value=""></h:outputLabel>
+    				<h:commandButton 
+    					value="Rechercher"
+    					action="#{listeCohortBean.search}" />
+    			</h:panelGrid>
+    		</h:form>
+    
+    
+    		<h:link outcome="/cohort/create">Créer une nouvelle cohorte</h:link> <br/>
+		Nombre de cohort : <h:outputText value="#{listeCohortBean.listCohorts.size()}" />
+		<table>
+			<thead>
+				<tr>
+					<td>Identifiant</td>
+					<td>Nom de la cohorte</td>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<ui:repeat var="c" value="#{listeCohortBean.listCohorts}">
+					<tr>
+						<td>
+							<h:outputText value="#{c.id}"></h:outputText>
+						</td>
+						<td>
+							<h:outputText value="#{c.name}"></h:outputText>
+						</td>
+					</tr>
+				</ui:repeat>
+			</tbody>
+		</table>
+		<br/><br/>
+		
+		<h:dataTable var="c" value="#{listeCohortBean.listCohorts}">
+			<h:column>
+				<f:facet name="header">Id</f:facet>
+				#{c.id}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Nom de la cohorte</f:facet>
+				#{c.name}
+			</h:column>
+		</h:dataTable>
+    </ui:define>
+</ui:composition>
+</html>
