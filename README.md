@@ -22,3 +22,6 @@ This repo contains sources for JEE training given at Edacy Makersday
                         <driver-class>com.mysql.jdbc.Driver</driver-class>
                     </driver>
 ```
+
+
+#Thanks a lot by smag
